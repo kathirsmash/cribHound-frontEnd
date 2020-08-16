@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Crib</h4>
+  <button type="button" class="close" data-dismiss="modal" (click)="closeModal('dismiss')">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form #cribForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label>Crib Name</label>
+          <input type="text" required #name="ngModel" class="form-control" name="name" [(ngModel)]="cribObj.name" placeholder="Enter Crib Name">
+          <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
+      </div>
+      <div class="form-group">
+          <label>Image URL</label>
+          <input type="url" required #img="ngModel" class="form-control" name="img" [(ngModel)]="cribObj.img" placeholder="Enter Image URL">
+          <small class="text-danger" [class.d-none]="img.valid || img.untouched">Image is required</small>
+      </div>
+      <div class="form-group">
+          <label>Location</label>
+          <input type="text" required #location="ngModel" class="form-control" name="location" [(ngModel)]="cribObj.location" placeholder="Enter Location">
+          <small class="text-danger" [class.d-none]="location.valid || location.untouched">Location is required</small>
+      </div>
+      <button class="btn btn-success" type="submit">Save</button>
+  </form>
+</div>

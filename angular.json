@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/business-frontpage.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cribHound-frontEnd"
+    }
+  },
+  "defaultProject": "cribHound-frontEnd",
+  "cli": {
+    "analytics": "518eb618-7d99-464a-bc6b-266feb3c5de3"
+  }
 }
